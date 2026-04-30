@@ -1,10 +1,10 @@
-const removeFromArray = function(array, item) {
+const removeFromArray = function(array, ...args) {
     let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] !== item) {
-            newArray = newArray.concat(array[i]);
+    array.forEach((item) => {
+        if(!args.includes(item)) {
+            newArray.push(item);
         }
-    }
+    });
     return newArray;
 };
 
