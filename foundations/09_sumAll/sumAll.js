@@ -1,4 +1,14 @@
-const sumAll = function(start, end) {
+const sumAll = function(a, b) {
+    let start;
+    let end;
+    if (a > b) {
+        start = b;
+        end = a;
+    } else {
+        start = a;
+        end = b;
+    }
+
     let arr = [];
 
     for (let i = start; i <= end; i++) {
